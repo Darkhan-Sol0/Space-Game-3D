@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Planets_resource" load_steps=4 format=3 uid="uid://b35yl6aogstv0"]
+
+[ext_resource type="Script" path="res://Scripts/Modulas/Planets.gd" id="1_e6ej0"]
+[ext_resource type="Texture2D" uid="uid://di38yr7c41mqy" path="res://Texture/231.jpg" id="1_tcxlb"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ejf1s"]
+albedo_texture = ExtResource("1_tcxlb")
+
+[resource]
+script = ExtResource("1_e6ej0")
+planet_name = "Venera"
+orbit_radiouse = 10.0
+planet_radiouse = 2.0
+planet_time_year = 15.0
+planet_day_time = -20.0
+planet_material = SubResource("StandardMaterial3D_ejf1s")

@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://c2lqwh7o4cwfg"]
+
+[ext_resource type="Script" path="res://Scripts/Objects/Planet_Script.gd" id="1_c5xmd"]
+[ext_resource type="Resource" uid="uid://fyyvf0ixjlxp" path="res://Objects/Planet resource/Earth.tres" id="2_giksb"]
+
+[node name="Earth" type="Node3D"]
+script = ExtResource("1_c5xmd")
+planet_resource = ExtResource("2_giksb")

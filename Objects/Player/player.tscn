@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://c7njbhxt08s5n"]
+
+[ext_resource type="Script" path="res://Scripts/Objects/player.gd" id="1_4x4d2"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_y1qtk"]
+
+[node name="Player" type="CharacterBody3D"]
+script = ExtResource("1_4x4d2")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_y1qtk")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+fov = 90.0

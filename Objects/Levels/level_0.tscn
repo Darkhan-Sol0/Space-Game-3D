@@ -1,0 +1,47 @@
+[gd_scene load_steps=11 format=3 uid="uid://dkihks4442y03"]
+
+[ext_resource type="Texture2D" uid="uid://c6ojlwb4vrb5j" path="res://123.jpg" id="1_1y85f"]
+[ext_resource type="PackedScene" uid="uid://c2lqwh7o4cwfg" path="res://Objects/Planet objects/earth.tscn" id="2_3nowm"]
+[ext_resource type="PackedScene" uid="uid://die1v7mh66ypi" path="res://Objects/Planet objects/Mars.tscn" id="3_vltwe"]
+[ext_resource type="PackedScene" uid="uid://bb8aqu4tp3xia" path="res://Objects/Planet objects/Venera.tscn" id="4_0q26e"]
+[ext_resource type="Texture2D" uid="uid://dwlkoki2pd281" path="res://43223.png" id="5_bejkt"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_gyuyx"]
+panorama = ExtResource("1_1y85f")
+
+[sub_resource type="Sky" id="Sky_casgh"]
+sky_material = SubResource("PanoramaSkyMaterial_gyuyx")
+
+[sub_resource type="Environment" id="Environment_wn0i2"]
+background_mode = 2
+sky = SubResource("Sky_casgh")
+sky_rotation = Vector3(1.5708, 0, 0)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jftts"]
+albedo_texture = ExtResource("5_bejkt")
+rim_enabled = true
+
+[sub_resource type="SphereMesh" id="SphereMesh_sfb6m"]
+material = SubResource("StandardMaterial3D_jftts")
+radius = 5.0
+height = 10.0
+
+[node name="Level 0" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_wn0i2")
+
+[node name="Earth" parent="." instance=ExtResource("2_3nowm")]
+
+[node name="Mars" parent="." instance=ExtResource("3_vltwe")]
+
+[node name="Venera" parent="." instance=ExtResource("4_0q26e")]
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+light_energy = 5.0
+light_size = 10.0
+shadow_enabled = true
+omni_range = 1000.0
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("SphereMesh_sfb6m")
