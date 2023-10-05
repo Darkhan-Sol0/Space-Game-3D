@@ -1,0 +1,17 @@
+[gd_scene load_steps=6 format=3 uid="uid://ndjujhugfwof"]
+
+[ext_resource type="Script" path="res://Scripts/Objects/Star_Script.gd" id="1_7v32e"]
+[ext_resource type="Resource" uid="uid://q8su27gv12al" path="res://Objects/Star resource/Sun.tres" id="2_ysppg"]
+[ext_resource type="PackedScene" uid="uid://c2lqwh7o4cwfg" path="res://Objects/Planet objects/earth.tscn" id="3_yjhgx"]
+[ext_resource type="PackedScene" uid="uid://die1v7mh66ypi" path="res://Objects/Planet objects/Mars.tscn" id="4_ctcpc"]
+[ext_resource type="PackedScene" uid="uid://bb8aqu4tp3xia" path="res://Objects/Planet objects/Venera.tscn" id="5_5ygl6"]
+
+[node name="Sun" type="Node3D"]
+script = ExtResource("1_7v32e")
+star_resource = ExtResource("2_ysppg")
+
+[node name="Earth" parent="." instance=ExtResource("3_yjhgx")]
+
+[node name="Mars" parent="." instance=ExtResource("4_ctcpc")]
+
+[node name="Venera" parent="." instance=ExtResource("5_5ygl6")]

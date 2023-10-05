@@ -4,6 +4,7 @@ class_name Star_Script
 @export var star_resource : Stars_resource
 
 var model
+var light
 
 func _ready():
 	model = star_resource.star_model
@@ -13,3 +14,15 @@ func _ready():
 	model.material = star_resource.star_material
 	
 	add_child(model)
+	
+	light = OmniLight3D.new()
+	light.light_energy = 10
+	light.omni_range = 1000
+	light.light_size = star_resource.star_radious
+	light.shadow_enabled = true
+	
+	add_child(light)
+	
+
+func _physics_process(delta):
+	model.rotation.y += 2 * PI / 50 * delta

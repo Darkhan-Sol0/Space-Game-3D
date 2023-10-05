@@ -19,7 +19,7 @@ func _ready():
 	
 	add_child(model)
 	
-	speed = 2 * PI * model.radius / planet_resource.planet_time_year
+	speed = 2 * PI * planet_resource.orbit_radiouse / planet_resource.planet_time_year
 
 func _physics_process(delta):
 	

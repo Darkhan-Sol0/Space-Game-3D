@@ -9,8 +9,8 @@ albedo_texture = ExtResource("1_bjus2")
 [resource]
 script = ExtResource("1_1sydo")
 planet_name = "Mars"
-orbit_radiouse = 30.0
+orbit_radiouse = 70.0
 planet_radiouse = 1.0
-planet_time_year = -10.0
+planet_time_year = -100.0
 planet_day_time = 20.0
 planet_material = SubResource("StandardMaterial3D_ejf1s")
