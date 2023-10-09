@@ -1,8 +1,0 @@
-[gd_scene load_steps=3 format=3 uid="uid://bb8aqu4tp3xia"]
-
-[ext_resource type="Script" path="res://Scripts/Objects/Planet_Script.gd" id="1_tg5f0"]
-[ext_resource type="Resource" uid="uid://b35yl6aogstv0" path="res://Objects/Planet resource/Venera.tres" id="2_ew83n"]
-
-[node name="Venera" type="Node3D"]
-script = ExtResource("1_tg5f0")
-planet_resource = ExtResource("2_ew83n")

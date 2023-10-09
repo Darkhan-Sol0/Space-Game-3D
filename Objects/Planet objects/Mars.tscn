@@ -1,8 +1,0 @@
-[gd_scene load_steps=3 format=3 uid="uid://die1v7mh66ypi"]
-
-[ext_resource type="Script" path="res://Scripts/Objects/Planet_Script.gd" id="1_cv3yw"]
-[ext_resource type="Resource" uid="uid://b3kpk56m0uufa" path="res://Objects/Planet resource/Mars.tres" id="2_meblc"]
-
-[node name="Mars" type="Node3D"]
-script = ExtResource("1_cv3yw")
-planet_resource = ExtResource("2_meblc")

@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://dkihks4442y03"]
+[gd_scene load_steps=7 format=3 uid="uid://dkihks4442y03"]
 
 [ext_resource type="Texture2D" uid="uid://c6ojlwb4vrb5j" path="res://Texture/123.jpg" id="1_1y85f"]
-[ext_resource type="PackedScene" uid="uid://ndjujhugfwof" path="res://Objects/Star objects/sun.tscn" id="2_amn32"]
+[ext_resource type="Script" path="res://Scripts/Objects/Galaxy_Script.gd" id="1_wmyij"]
+[ext_resource type="Resource" uid="uid://bw6a2mjfbm0g5" path="res://Objects/Galaxy resource/Ufo.tres" id="2_ggwah"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_gyuyx"]
 panorama = ExtResource("1_1y85f")
@@ -15,8 +16,8 @@ sky = SubResource("Sky_casgh")
 sky_rotation = Vector3(1.5708, 0, 0)
 
 [node name="Level 0" type="Node3D"]
+script = ExtResource("1_wmyij")
+galaxy_resource = ExtResource("2_ggwah")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_wn0i2")
-
-[node name="Sun" parent="." instance=ExtResource("2_amn32")]

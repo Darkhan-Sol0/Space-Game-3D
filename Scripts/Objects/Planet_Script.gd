@@ -15,7 +15,7 @@ func _ready():
 	model.rings = 100
 	model.material = planet_resource.planet_material
 	
-	position = owner.global_position + Vector3(0, 0, planet_resource.orbit_radiouse)
+	global_position = get_parent().global_position + Vector3(0, 0, planet_resource.orbit_radiouse)
 	
 	add_child(model)
 	
@@ -23,7 +23,7 @@ func _ready():
 
 func _physics_process(delta):
 	
-	look_at(owner.position)
+	look_at(get_parent().global_position)
 	
 	model.rotation.y += 2 * PI / planet_resource.planet_day_time * delta
 	

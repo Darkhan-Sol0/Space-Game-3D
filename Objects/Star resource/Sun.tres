@@ -1,7 +1,10 @@
-[gd_resource type="Resource" script_class="Stars_resource" load_steps=4 format=3 uid="uid://q8su27gv12al"]
+[gd_resource type="Resource" script_class="Stars_resource" load_steps=7 format=3 uid="uid://q8su27gv12al"]
 
+[ext_resource type="Resource" uid="uid://fyyvf0ixjlxp" path="res://Objects/Planet resource/Earth.tres" id="1_5dbpo"]
 [ext_resource type="Script" path="res://Scripts/Modulas/Stars.gd" id="1_tx3t5"]
 [ext_resource type="Texture2D" uid="uid://dwlkoki2pd281" path="res://Texture/43223.png" id="2_rb1v2"]
+[ext_resource type="Resource" uid="uid://b3kpk56m0uufa" path="res://Objects/Planet resource/Mars.tres" id="3_3x02s"]
+[ext_resource type="Resource" uid="uid://b35yl6aogstv0" path="res://Objects/Planet resource/Venera.tres" id="3_l6vdh"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kq0tq"]
 albedo_texture = ExtResource("2_rb1v2")
@@ -12,3 +15,5 @@ script = ExtResource("1_tx3t5")
 star_name = "Sun"
 star_radious = 5.0
 star_material = SubResource("StandardMaterial3D_kq0tq")
+planets = Array[Resource("res://Scripts/Modulas/Planets.gd")]([ExtResource("1_5dbpo"), ExtResource("3_l6vdh"), ExtResource("3_3x02s")])
+day_time = 60.0

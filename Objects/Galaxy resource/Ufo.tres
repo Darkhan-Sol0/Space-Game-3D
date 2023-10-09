@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Galaxy_resource" load_steps=3 format=3 uid="uid://bw6a2mjfbm0g5"]
+
+[ext_resource type="Script" path="res://Scripts/Modulas/Galaxy.gd" id="1_pkx6e"]
+[ext_resource type="Resource" uid="uid://q8su27gv12al" path="res://Objects/Star resource/Sun.tres" id="2_ir2to"]
+
+[resource]
+script = ExtResource("1_pkx6e")
+galaxy_name = "UFO"
+stars = Array[Resource("res://Scripts/Modulas/Stars.gd")]([ExtResource("2_ir2to")])
